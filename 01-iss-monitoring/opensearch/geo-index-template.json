@@ -1,0 +1,33 @@
+{
+  "index_patterns": [
+    "iss"
+  ],
+  "template": {
+    "settings": {
+      "index.number_of_shards": "1",
+      "index.number_of_replicas": "1"
+    },
+    "mappings": {
+      "properties": {
+        "name": {
+          "type": "keyword"
+        },
+        "altitude_m": {
+          "type": "float"
+        },
+        "point": {
+          "type": "geo_point"
+        },
+        "timestamp": {
+          "type": "date"
+        }
+      }
+    }
+  },
+  "composed_of": [],
+  "priority": "0",
+  "_meta": {
+    "flow": "simple"
+  },
+  "name": "geo"
+}
